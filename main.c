@@ -6,7 +6,7 @@ int main()
     int s[2048],save,readfrom,i;
     for(i=0;i<=128;i++)
     {
-       printf("Please enter options: \n[1]Save to array\n[2]Read from array\nOption: ");
+       printf("\nPlease enter options: \n[1]Save to array\n[2]Read from array\nOption: ");
        save==0;
        scanf("%d",&save);
        if(save==1)
