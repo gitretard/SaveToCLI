@@ -4,3 +4,4 @@ Problems:
 1.code efficiency so bad it can cause thermonuclear war
 2.dogshit error handling
 shows how bad ill be with even larger programs. doubt ill be able to do anything useful
+also i tried to add header names for everything in the main araay failed so badly severe skill issue momen
