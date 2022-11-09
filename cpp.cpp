@@ -2,41 +2,57 @@
 using namespace std;
 int main()
 {
-    int main[2048],i,curopt;
-    string savelen;
-    /*cin cout go brrrrrrrrrr*/
-    for(i=0;i<256;i++)
+    int curopt,i,j;
+    uint64_t main[16384];
+    bool first;
+    first = true;
+    while (true)
     {
-        cout << "\n\n\nHi please enter the correct options. idk how to handle errors yet\n[1]Write to array\n[2]Read from array\nEnter option: ";
-        curopt==2;
+        if(first==true)
+        {
+            cout << "\n\nUnsafe&&Inefficient program smh my head, also used 64 bits for main array so u can enter more digits still unsure hout much\n\n";
+            first = false;
+        }
+
+        cout << "\n\nEnter options:\n[1] Write to array\n[2] Read from array\n[3] List arrays from range(on god please be careful)\n[4] Abort\nOptions: ";
         cin >> curopt;
         if(curopt==1)
         {
-            cout << "[1]Use current incrementing position: " << i << " To write int to main array\n[2]Enter desired index position to write to main array\nOption: ";
+            cout << "Enter array index location to save to: ";
             cin >> curopt;
-            if(curopt==1)
-            {
-                cout << "Enter int to save to main array index postion " << i << " : ";
-                cin >> main[i];
-                cout << "Saved int to index position " << i << "in main array";
-            }
-           if(curopt==2)
-            {
-                cout << "Enter array index position to write to: ";
-                cin >> curopt;
-                cout << "Write int to save to array index position: " << curopt << " : ";
-                cin >> main[curopt];
-                cout << "Wrote to main array index position: " << curopt /*"With length of :" << savelen.length;*/; 
-                
-            }
+            cout << "\nEnter int to save to array index: " << curopt<<" : ";
+            cin >> main[curopt];
+            cout << "\nSaved to \n--> " << curopt << " \nin main array at memory address \n--> " << &curopt;
+            curopt=0;
         }
         if(curopt==2)
         {
-            cout << "Enter array index position to read from: ";
+            cout << "\nEnter array index location to read from: ";
             cin >> curopt;
-            cout << "Array index position: " << curopt << " : " << main[curopt];
+            cout<<"\nContent of\n--> " << curopt << " in array index location and at memory address\n--> " << &main[curopt] << " \n is: " << main[curopt];
+            curopt=0;
+
+        }
+        if(curopt==3)
+        {
+            cout << "Enter starting range: ";
+            cin >> i;
+            cout << "\nEnter ending range: ";
+            cin >> j;
+            cout << "\n\n";
+            for(i=i,j=j;i<=j;i++)
+            {
+                cout<<i << " --> " << &main[i] << " is: " << main[i] <<"\n";
+ 
+            }
+            curopt=0;
+
+        }
+        if(curopt==4)
+        {
+            cout << "\n\nuguudriuyoftsiuutitriuodsftoisdjkhio";
+            break;
         }
     }
     
-
 }
